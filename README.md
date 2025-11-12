@@ -6,7 +6,6 @@ Elle permet à un administrateur de gérer efficacement les clients, produits, c
 
 L’objectif de ce projet est de proposer une solution complète pour la gestion d’un petit magasin, avec une interface fluide et une expérience utilisateur professionnelle.
 
-⚙️ Fonctionnalités principales
 🔐 Authentification
 
 Écran de connexion sécurisé avec nom d’utilisateur et mot de passe.
