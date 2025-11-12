@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"  fx:controller="controller.AjouterCommandeController">
+   <children>
+       <Label layoutX="300" layoutY="20" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Ajouter une commande" />
+       
+       <!-- Client Search -->
+       <Label layoutX="50" layoutY="70" text="Rechercher client par:" />
+       <ComboBox fx:id="combobox" layoutX="50" layoutY="90" prefWidth="200" />
+       <TextField fx:id="searchtext" layoutX="50" layoutY="120" prefWidth="200" promptText="Terme de recherche" />
+       <Button layoutX="260" layoutY="120" onAction="#cherche" text="Rechercher" />
+       
+       <!-- Clients Table -->
+       <TableView fx:id="TabeaulClient" layoutX="36.0" layoutY="171.0" prefHeight="234.0" prefWidth="347.0">
+           <columns>
+               <TableColumn fx:id="nomclient" prefWidth="75" text="Nom" />
+               <TableColumn fx:id="prenomclient" prefWidth="75" text="Prénom" />
+               <TableColumn fx:id="adresseclient" prefWidth="100" text="Adresse" />
+               <TableColumn fx:id="teleclient" prefWidth="100" text="Téléphone" />
+           </columns>
+       </TableView>
+       
+       <!-- Products Search -->
+       <Label layoutX="450" layoutY="70" text="Rechercher produit par:" />
+       <ComboBox fx:id="produitCombobox" layoutX="450" layoutY="90" prefWidth="150" />
+       <TextField fx:id="produitSearchText" layoutX="450" layoutY="120" prefWidth="150" promptText="Terme de recherche" />
+       <Button layoutX="610" layoutY="120" onAction="#chercheProduit" text="Rechercher" />
+       <Button layoutX="700" layoutY="120" onAction="#reinitialiserRechercheProduit" text="Réinitialiser" />
+       
+       <!-- Products Table -->
+       <Label layoutX="450" layoutY="150" text="Produits disponibles" />
+       <TableView fx:id="TableauProduit" layoutX="436.0" layoutY="170" prefHeight="300" prefWidth="429.0">
+           <columns>
+               <TableColumn fx:id="nomproduit" prefWidth="120" text="Produit" />
+               <TableColumn fx:id="quatiteproduit" prefWidth="60" text="Stock" />
+               <TableColumn fx:id="prixProduit" prefWidth="60" text="Prix" />
+               <TableColumn fx:id="checkproduit" prefWidth="60" text="Choisir" />
+               <TableColumn fx:id="quantiteChoisi" prefWidth="80" text="Quantité" />
+           </columns>
+       </TableView>
+       
+       <Button fx:id="Ajoutercommand" layoutX="350" layoutY="500" onAction="#Ajoutercommand" prefHeight="30" prefWidth="200" text="Valider la commande" />
+   </children>
+</AnchorPane>

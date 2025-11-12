@@ -1,0 +1,20 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "application.App",
+            "projectName": "gestion_vente_906ab0a1",
+             "vmArgs": "--module-path \"C:/javafx-sdk-24/lib\"  --add-modules javafx.media,javafx.controls,javafx.fxml -cp \"lib/*\""
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
+            "mainClass": "App",
+            "projectName": "gestion_vente_906ab0a1",
+            "vmArgs": "--module-path \"C:/javafx-sdk-24/lib\"  --add-modules javafx.media,javafx.controls,javafx.fxml -cp \"lib/*\""
+        }
+    ]
+}

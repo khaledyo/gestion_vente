@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400" prefWidth="500" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController">
+   <children>
+      <Label layoutX="100" layoutY="30" text="Entrer les informations du client" />
+      <Label layoutX="100" layoutY="80" text="Nom:" />
+      <TextField fx:id="textnomclient" layoutX="200" layoutY="75" />
+      <Label layoutX="100" layoutY="120" text="Prénom:" />
+      <TextField fx:id="textprenomclient" layoutX="200" layoutY="115" />
+      <Label layoutX="100" layoutY="160" text="Adresse:" />
+      <TextField fx:id="textadressclient" layoutX="200" layoutY="155" />
+      <Label layoutX="100" layoutY="200" text="Téléphone:" />
+      <TextField fx:id="textteleclient" layoutX="200" layoutY="195" />
+      <Button layoutX="242.0" layoutY="248.0" onAction="#AjouterClient" text="Ajouter" />
+      <!-- Label pour afficher les messages de succès ou d'erreur -->
+      <Label fx:id="messageLabel" contentDisplay="CENTER" layoutX="166.0" layoutY="290.0" prefHeight="21.0" prefWidth="290.0" />
+   </children>
+</AnchorPane>

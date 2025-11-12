@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="498.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientSuppModifController">
+
+    <children>
+        <!-- Zone de recherche -->
+        <Label layoutX="26.0" layoutY="65.0" text="Rechercher un client par :" />
+        <ComboBox fx:id="combobox" layoutX="200" layoutY="60" prefWidth="200" />
+        <TextField fx:id="choosetext" layoutX="200" layoutY="100" prefWidth="200" />
+        <Button layoutX="420" layoutY="100" onAction="#cherche" text="Chercher" />
+
+        <!-- Table des clients -->
+        <TableView fx:id="TableClient" layoutX="100" layoutY="150" onMouseClicked="#modifier" prefHeight="150" prefWidth="500">
+            <columns>
+                <TableColumn fx:id="nomcolon" prefWidth="100" text="Nom" />
+                <TableColumn fx:id="prenomcolone" prefWidth="100" text="Prénom" />
+                <TableColumn fx:id="adresscolone" prefWidth="150" text="Adresse" />
+                <TableColumn fx:id="telecolone" prefWidth="150" text="Téléphone" />
+            </columns>
+        </TableView>
+
+        <!-- Modification -->
+        <Label layoutX="50" layoutY="320" text="Nom" />
+        <TextField fx:id="nomtext" layoutX="200" layoutY="320" prefWidth="200" />
+
+        <Label layoutX="50" layoutY="360" text="Prénom" />
+        <TextField fx:id="prenomtext" layoutX="200" layoutY="360" prefWidth="200" />
+
+        <Label layoutX="50" layoutY="400" text="Adresse" />
+        <TextField fx:id="adresstext" layoutX="200" layoutY="400" prefWidth="200" />
+
+        <Label layoutX="50" layoutY="440" text="Téléphone" />
+        <TextField fx:id="telephonetext" layoutX="200" layoutY="440" prefWidth="200" />
+
+        <Button layoutX="500.0" layoutY="360.0" onAction="#updateClient" text="Modifier" />
+        <Button layoutX="420" layoutY="360" onAction="#annuler" text="Annuler" />
+        <Button layoutX="589.0" layoutY="360.0" onAction="#supprimer" text="Supprimer" />
+    </children>
+</AnchorPane>

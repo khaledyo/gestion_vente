@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="513.0" prefWidth="906.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.GestionCommandesController">
+   
+   <children>
+      <!-- Recherche -->
+      <ComboBox fx:id="combobox" layoutX="40.0" layoutY="40.0" prefWidth="150.0" />
+      <TextField fx:id="cherchetext" layoutX="40.0" layoutY="72.0" />
+      <Button fx:id="cherche" layoutX="214.0" layoutY="72.0" mnemonicParsing="false" onAction="#chercher" text="Chercher" />
+      <Button fx:id="annuler" layoutX="290.0" layoutY="72.0" mnemonicParsing="false" onAction="#annulerRecherche" text="Annuler" />
+      
+      <!-- Tableau Commandes -->
+      <TableView fx:id="tableaucommand" layoutX="20.0" layoutY="110.0" prefHeight="200.0" prefWidth="446.0">
+        <columns>
+          <TableColumn fx:id="numclient" prefWidth="100.0" text="Client" />
+          <TableColumn fx:id="numcommande" prefWidth="100.0" text="Commande" />
+          <TableColumn fx:id="date" prefWidth="100.0" text="Date" />
+          <TableColumn fx:id="actionsCommande" prefWidth="150.0" text="Actions" />
+        </columns>
+      </TableView>
+      
+      <!-- Tableau Produits -->
+      <TableView fx:id="tableauproduit" layoutX="517.0" layoutY="110.0" prefHeight="200.0" prefWidth="350.0">
+        <columns>
+          <TableColumn fx:id="nomproduit" prefWidth="150.0" text="Produit" />
+          <TableColumn fx:id="quantiteprod" prefWidth="100.0" text="Quantité" />
+          <TableColumn fx:id="actionsProduit" prefWidth="100.0" text="Actions" />
+        </columns>
+      </TableView>
+      
+      <!-- Formulaire Modification -->
+      <Label layoutX="20.0" layoutY="330.0" text="Numéro Client:" />
+      <TextField fx:id="textnumclient" layoutX="144.0" layoutY="325.0" prefHeight="31.0" prefWidth="150.0" />
+      
+      <Label layoutX="20.0" layoutY="370.0" text="Date:" />
+      <DatePicker fx:id="datetext" layoutX="144.0" layoutY="367.0" prefWidth="150.0" />
+      
+      <Button fx:id="modifiercomm" layoutX="144.0" layoutY="413.0" mnemonicParsing="false" onAction="#modifierCommande" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Enregistrer" />
+      
+      <!-- Modification Produit -->
+      <Label layoutX="517.0" layoutY="330.0" prefHeight="21.0" prefWidth="63.0" text="Quantité:" />
+      <TextField fx:id="quantitetext" layoutX="614.0" layoutY="325.0" prefWidth="100.0" />
+      
+      <Button fx:id="modifierproduit" layoutX="618.0" layoutY="376.0" mnemonicParsing="false" onAction="#modifierProduit" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Enregistrer" />
+   </children>
+</AnchorPane>

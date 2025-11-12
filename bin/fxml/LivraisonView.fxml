@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LivraisonController">
+   
+    
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <!-- Formulaire -->
+            <GridPane hgap="15" vgap="15" style="-fx-padding: 10; -fx-background-color: #f8f9fa; -fx-border-color: #dee2e6; -fx-border-radius: 5;">
+                <columnConstraints>
+                    <ColumnConstraints prefWidth="150" halignment="RIGHT"/>
+                    <ColumnConstraints prefWidth="300"/>
+                </columnConstraints>
+                
+                <Label text="Numéro de commande:" GridPane.rowIndex="0" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="numeroCommandeField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                
+                <Label text="Date de livraison:" GridPane.rowIndex="1" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <DatePicker fx:id="dateLivraisonPicker" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                
+                <Label text="Statut:" GridPane.rowIndex="2" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <ComboBox fx:id="statutComboBox" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                
+                <Label text="Adresse:" GridPane.rowIndex="3" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="adresseLivraisonField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                
+                <Label text="Transporteur:" GridPane.rowIndex="4" GridPane.columnIndex="0" style="-fx-font-weight: bold;"/>
+                <TextField fx:id="transporteurField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                
+                <HBox spacing="10" GridPane.rowIndex="5" GridPane.columnIndex="1" alignment="CENTER_RIGHT">
+                    <Button fx:id="ajouterBtn" text="Ajouter" style="-fx-background-color: #28a745; -fx-text-fill: white;" onAction="#handleAjouterLivraison"/>
+                    <Button fx:id="modifierBtn" text="Modifier" style="-fx-background-color: #17a2b8; -fx-text-fill: white;" onAction="#handleModifierLivraison" disable="true"/>
+                    <Button fx:id="supprimerBtn" text="Supprimer" style="-fx-background-color: #dc3545; -fx-text-fill: white;" onAction="#handleSupprimerLivraison" disable="true"/>
+                    <Button fx:id="annulerBtn" text="Annuler" style="-fx-background-color: #6c757d; -fx-text-fill: white;" onAction="#handleAnnuler"/>
+                </HBox>
+            </GridPane>
+            
+            <!-- TableView -->
+            <TableView fx:id="livraisonTableView">
+                <columns>
+                    <TableColumn fx:id="numeroLivraisonCol" text="N° Livraison" prefWidth="80">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="numeroLivraison" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="numeroCommandeCol" text="N° Commande" prefWidth="90">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="numeroCommande" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="dateLivraisonCol" text="Date Livraison" prefWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="dateLivraison" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="statutCol" text="Statut" prefWidth="120">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="statut" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="transporteurCol" text="Transporteur" prefWidth="150">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="transporteur" />
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn fx:id="adresseCol" text="Adresse" prefWidth="250">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="adresseLivraison" />
+                        </cellValueFactory>
+                    </TableColumn>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+    
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" style="-fx-padding: 10; -fx-background-color: #ecf0f1;">
+            <Label fx:id="statusLabel" text="Prêt" style="-fx-text-fill: #2c3e50; -fx-font-weight: bold;"/>
+        </HBox>
+    </bottom>
+</BorderPane>

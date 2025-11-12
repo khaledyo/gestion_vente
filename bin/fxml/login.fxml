@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="255.0" style="-fx-background-color: #FFC845;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView blendMode="DARKEN" fitHeight="168.0" fitWidth="256.0" layoutX="44.0" layoutY="116.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Screenshot%202025-04-27%20135650-modified.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="345.0" style="-fx-background-color: #ECECE7;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView blendMode="DARKEN" fitHeight="67.0" fitWidth="106.0" layoutX="128.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/5257608-middle.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="157.0" text="Username :" />
+            <TextField fx:id="usernameTextField" layoutX="125.0" layoutY="152.0" prefHeight="27.0" prefWidth="173.0" promptText="Username" />
+            <Label layoutX="49.0" layoutY="205.0" text="Password :" />
+            <PasswordField fx:id="enterPasswordField" layoutX="125.0" layoutY="200.0" prefHeight="27.0" prefWidth="173.0" promptText="Password" />
+            <Button fx:id="loginButton" layoutX="32.0" layoutY="277.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="292.0" style="-fx-background-color: #FFC845;" text="Login" />
+            <!-- Error Label -->
+            <Label fx:id="errorLabel" alignment="CENTER" layoutX="34.0" layoutY="245.0" prefHeight="21.0" prefWidth="290.0" text="Invalid Login. Please try again." textFill="#ff1414" visible="false" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

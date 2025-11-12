@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.layout.StackPane?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import de.jensd.fx.fontawesome.test.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="704.0" prefWidth="1028.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+
+    <children>
+        <!-- Sidebar -->
+        <AnchorPane fx:id="sidebar" layoutX="0.0" layoutY="0.0" maxHeight="1.7976931348623157E308" minWidth="247.0" prefHeight="704.0" prefWidth="247.0" style="-fx-background-color:#FC3;">
+            <children>
+                <VBox layoutX="96.0" layoutY="80.0" prefHeight="419.0" prefWidth="80.0" style="-fx-spacing: 5;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="120.0">
+                    <children>
+                        <!-- Client Section -->
+                        <HBox alignment="CENTER_LEFT" style="-fx-background-color: transparent;-fx-spacing: 5;">
+                            <children>
+                                <FontAwesomeIcon iconName="USER" size="2em" wrappingWidth="15.785714149475098"/>
+                                <Label fx:id="label1" onMouseClicked="#show" prefHeight="33.0" prefWidth="104.0" style="-fx-cursor: hand;" text="Client">
+                                    <font>
+                                        <Font name="System Bold" size="21.0"/>
+                                    </font>
+                                    <padding>
+                                        <Insets left="20.0" top="2.0"/>
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets top="10.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="15.0"/>
+                            </VBox.margin>
+                        </HBox>
+                        
+                        <AnchorPane fx:id="choices" prefHeight="9.0" prefWidth="249.0">
+                            <children>
+                                <Label fx:id="choix1_1" onMouseClicked="#ajouterClient" prefHeight="17.0" prefWidth="153.0" style="-fx-cursor: hand;" text="Ajouter Client" visible="false" AnchorPane.leftAnchor="40.0">
+                                    <font>
+                                        <Font name="Times New Roman" size="16.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="choix1_2" layoutY="24.0" onMouseClicked="#Client" prefHeight="29.0" prefWidth="199.0" style="-fx-cursor: hand;" text="Supprimer, Modifier Client" visible="false" AnchorPane.leftAnchor="40.0">
+                                    <font>
+                                        <Font name="Times New Roman" size="16.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+
+                        <!-- Produit Section -->
+                        <HBox>
+                            <children>
+                                <FontAwesomeIcon iconName="CUBE" size="2em"/>
+                                <Label fx:id="label2" onMouseClicked="#showProduit" prefHeight="35.0" prefWidth="94.0" style="-fx-cursor: hand;" text="Produit">
+                                    <font>
+                                        <Font name="System Bold" size="21.0"/>
+                                    </font>
+                                    <padding>
+                                        <Insets left="20.0" top="2.0"/>
+                                    </padding>
+                                    <HBox.margin>
+                                        <Insets bottom="50.0"/>
+                                    </HBox.margin>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="10.0"/>
+                            </VBox.margin>
+                        </HBox>
+
+                        <!-- Commande Section -->
+                        <HBox style="-fx-background-color: transparent;">
+                            <children>
+                                <FontAwesomeIcon iconName="SHOPPING_CART" size="2em">
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </FontAwesomeIcon>
+                                <Label fx:id="label3" onMouseClicked="#showCommande" prefHeight="33.0" prefWidth="133.0" style="-fx-cursor: hand;" text="Commande">
+                                    <font>
+                                        <Font name="System Bold" size="21.0"/>
+                                    </font>
+                                    <padding>
+                                        <Insets left="20.0" top="2.0"/>
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                        
+                        <AnchorPane fx:id="choices2">
+                            <children>
+                                <Label fx:id="choix3_1" onMouseClicked="#ajouterCommande" prefHeight="20.0" prefWidth="199.0" style="-fx-cursor: hand;" text="Ajouter Commande" visible="false" AnchorPane.leftAnchor="40.0">
+                                    <font>
+                                        <Font name="Times New Roman" size="16.0"/>
+                                    </font>
+                                </Label>
+                                <Label fx:id="choix3_2" onMouseClicked="#GestionCommande" layoutY="28.0" prefHeight="21.0" prefWidth="199.0" style="-fx-cursor: hand;" text="Supprimer, Modifier Commande" visible="false" AnchorPane.leftAnchor="40.0">
+                                    <font>
+                                        <Font name="Times New Roman" size="16.0"/>
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                        <HBox style="-fx-background-color: transparent;">
+                            <children>
+                                <FontAwesomeIcon iconName="TRUCK" size="2em">
+                                    <HBox.margin>
+                                        <Insets left="10.0"/>
+                                    </HBox.margin>
+                                </FontAwesomeIcon>
+                                <Label fx:id="label5" onMouseClicked="#GestionLivraison" prefHeight="13.0" prefWidth="130.0" style="-fx-cursor: hand;" text="Livraison">
+                                    <font>
+                                        <Font name="System Bold" size="21.0"/>
+                                    </font>
+                                    <padding>
+                                        <Insets left="20.0" top="2.0"/>
+                                    </padding>
+                                </Label>
+                            </children>
+                        </HBox>
+                       
+                        
+
+                        <!-- Livraison Section -->
+                        
+                        
+                       
+                    </children>
+                </VBox>
+                
+                <AnchorPane fx:id="img_1" layoutX="14.0" layoutY="22.0" prefHeight="79.0" prefWidth="79.0" styleClass="img_1" stylesheets="@../css/application.css">
+                    <children>
+                        <ImageView fitHeight="79.0" fitWidth="91.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/Screenshot%202025-04-27%20135650-modified.png"/>
+                            </image>
+                        </ImageView>
+                    </children>
+                </AnchorPane>
+                
+                <Label layoutX="100.0" layoutY="48.0" prefHeight="28.0" prefWidth="139.0" text="Gigashop">
+                    <font>
+                        <Font name="Times New Roman Bold" size="24.0"/>
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+
+        <!-- Contenu Principal -->
+        <HBox alignment="CENTER" layoutX="280" layoutY="10" prefHeight="149.0" prefWidth="700" spacing="20.0">
+            <children>
+                <AnchorPane prefHeight="141.0" prefWidth="164.0" style="-fx-background-color: linear-gradient(to right,rgb(180, 132, 1),rgb(243, 178, 1)); -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                    <children>
+                        <ImageView fitHeight="60.0" fitWidth="46.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/box.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="nbrcommandelabel" layoutX="26.0" layoutY="106.0" prefHeight="35.0" prefWidth="91.0" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="27.0" layoutY="65.0" prefHeight="29.0" prefWidth="79.0" text="COMMANDES" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="11.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                
+                <AnchorPane prefHeight="141.0" prefWidth="164.0" style="-fx-background-color: linear-gradient(to right, rgb(184, 135, 1),rgb(243, 178, 1)); -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                    <children>
+                        <ImageView fitHeight="62.0" fitWidth="48.0" layoutX="2.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@/images/patient.png"/>
+                            </image>
+                        </ImageView>
+                        <Label layoutX="35.0" layoutY="65.0" prefHeight="29.0" prefWidth="65.0" text="CLIENTS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="nbrclientlabel" layoutX="26.0" layoutY="106.0" prefHeight="35.0" prefWidth="91.0" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                
+                <AnchorPane prefHeight="141.0" prefWidth="164.0" style="-fx-background-color: linear-gradient(to right, rgb(184, 135, 1),rgb(243, 178, 1)); -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                    <children>
+                        <ImageView fitHeight="57.0" fitWidth="47.0" layoutX="5.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/fast-delivery.png"/>
+                            </image>
+                        </ImageView>
+                        <Label  layoutX="35.0" layoutY="65.0" prefHeight="29.0" prefWidth="65.0" text="LIVRAISON" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                        <Label fx:id="nbrlivraisonlabel" layoutX="26.0" layoutY="106.0" prefHeight="35.0" prefWidth="91.0" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+                
+                <AnchorPane prefHeight="141.0" prefWidth="164.0" style="-fx-background-color: linear-gradient(to right,rgb(184, 135, 1),rgb(243, 178, 1)); -fx-background-radius: 20; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);">
+                    <children>
+                        <ImageView fitHeight="58.0" fitWidth="45.0" layoutX="4.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/brand-identity.png"/>
+                            </image>
+                        </ImageView>
+                        <Label fx:id="nbrprdlabel" layoutX="26.0" layoutY="106.0" prefHeight="35.0" prefWidth="91.0" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="14.0"/>
+                            </font>
+                        </Label>
+                        <Label layoutX="35.0" layoutY="65.0" prefHeight="29.0" prefWidth="65.0" text="PRODUITS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="12.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </HBox>
+        <!-- Statistiques Livraison -->
+        <VBox fx:id="leftVbox" layoutX="290.0" layoutY="150.0" prefHeight="100.0" prefWidth="300.0" style="-fx-background-color: none;">
+           <padding>
+              <Insets bottom="25.0" top="40.0" />
+           </padding>
+           <children>
+              <HBox prefHeight="19.0" prefWidth="190.0" spacing="10.0">
+                 <children>
+                    <Label prefHeight="18.0" prefWidth="160" style="-fx-text-fill: red;" text="Livraison non effectuée" textFill="#fb0505">
+                       <font>
+                          <Font name="System Bold" size="13.0" />
+                       </font>
+                    </Label>
+                    <Label fx:id="nonaffeclivrnbr" prefHeight="18.0" prefWidth="42.0" style="-fx-text-fill: red; -fx-font-weight: bold; -fx-font-size: 14;"/>
+                 </children>
+              </HBox>
+              <HBox prefHeight="20.0" prefWidth="190.0" spacing="10.0">
+                 <children>
+                    <Label prefHeight="18.0" prefWidth="160.0" style="-fx-text-fill: green;" text="Livraison effectuée" textFill="#d6d6d6">
+                       <font>
+                          <Font name="System Bold" size="13.0" />
+                       </font>
+                    </Label>
+                    <Label fx:id="affeclivrnbr" prefHeight="18.0" prefWidth="60.0" style="-fx-text-fill: green; -fx-font-weight: bold; -fx-font-size: 14;"/>
+                 </children>
+              </HBox>
+           </children>
+        </VBox>
+        <!-- Section Produits proches de l'épuisement -->
+        <VBox layoutX="280.0" layoutY="180.0" prefWidth="700.0" spacing="15"  AnchorPane.bottomAnchor="10.0"
+       AnchorPane.leftAnchor="280.0" style="-fx-alignment: center; -fx-padding: 10;">
+            <children>
+                <Label text="les produits proche a epuise" 
+                       style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #333;"/>
+                
+                <HBox spacing="40" alignment="CENTER">
+                    <children>
+                        <!-- Produit 1 -->
+                        <VBox alignment="CENTER" spacing="5">
+                            <children>
+                               
+                                <StackPane>
+                                    <Circle radius="40" fill="transparent" stroke="#FF0000" strokeWidth="2"/>
+                                    <Label fx:id="produit1Quantite" 
+                                           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF0000;"
+                                           StackPane.alignment="CENTER"/>
+                                </StackPane>
+                                 <Label fx:id="produit1Nom" 
+                                       style="-fx-font-size: 15px; -fx-text-fill: #333;"/>
+                            </children>
+                        </VBox>
+                        
+                        <!-- Produit 2 -->
+                        <VBox alignment="CENTER" spacing="5">
+                            <children>
+                                
+                                <StackPane>
+                                    <Circle radius="40" fill="transparent" stroke="#FF0000" strokeWidth="2"/>
+                                    <Label fx:id="produit2Quantite" 
+                                           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF0000;"
+                                           StackPane.alignment="CENTER"/>
+                                </StackPane>
+                                <Label fx:id="produit2Nom" 
+                                       style="-fx-font-size: 15px; -fx-text-fill: #333;"/>
+                            </children>
+                        </VBox>
+                        
+                        <!-- Produit 3 -->
+                        <VBox alignment="CENTER" spacing="5">
+                            <children>
+                               
+                                <StackPane>
+                                    <Circle radius="40" fill="transparent" stroke="#FF0000" strokeWidth="2"/>
+                                    <Label fx:id="produit3Quantite" 
+                                           style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #FF0000;"
+                                           StackPane.alignment="CENTER"/>
+                                     
+                                </StackPane>
+                                <Label fx:id="produit3Nom" 
+                                       style="-fx-font-size: 15px; -fx-text-fill: #333;"/>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
