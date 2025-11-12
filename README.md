@@ -9,7 +9,7 @@
 
 **Une application moderne de gestion de vente et de stock développée avec JavaFX**
 
-[Fonctionnalités](#-fonctionnalités) • [Captures d'écran](#-captures-décran) • [Installation](#-installation) • [Technologies](#-technologies-utilisées)
+[Fonctionnalités](#-fonctionnalités) • [Captures d'écran](#captures-décran) • [Installation](#-installation) • [Technologies](#-technologies-utilisées)
 
 </div>
 
@@ -55,6 +55,7 @@ L'application offre une **interface moderne et intuitive** avec une expérience 
 - ✅ Mise à jour automatique des statuts
 - ✅ Suivi des livraisons en temps réel
 
+<a id="captures-décran"></a>
 ## 🖼️ Captures d'écran
 
 <div align="center">
@@ -67,6 +68,12 @@ L'application offre une **interface moderne et intuitive** avec une expérience 
 
 ### 👤 Gestion des Clients
 <img width="400" alt="Interface de gestion clients" src="https://github.com/user-attachments/assets/11cb8af5-e074-4c0d-a137-9f624fd208d9" />
+
+### 📋 Gestion des Commandes
+<img width="400" alt="Interface de gestion des commandes" src="https://github.com/user-attachments/assets/db3c7e5c-f74f-4557-b112-e0fb2856fdcb" />
+
+### 🚚 Gestion des Livraisons
+<img width="400" alt="Interface de gestion des livraisons" src="https://github.com/user-attachments/assets/4c6be6d6-2a3c-4cc8-9bad-e94178be2ce7" />
 
 </div>
 
