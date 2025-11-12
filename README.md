@@ -96,9 +96,4 @@ L'application offre une **interface moderne et intuitive** avec une expérience 
 - **MySQL 8.0** ou supérieur
 - **Scene Builder** (recommandé)
 
-### 📥 Installation
 
-1. **Cloner le repository**
-```bash
-git clone https://github.com/votre-username/gigashop.git
-cd gigashop
