@@ -85,7 +85,6 @@ L'application offre une **interface moderne et intuitive** avec une expérience 
 | **🎨 Design** | CSS3, Material Design |
 | **💾 Base de données** | MySQL, JDBC |
 | **🏗️ Architecture** | Pattern MVC (Modèle-Vue-Contrôleur) |
-| **📦 Gestion de build** | Maven |
 | **🔧 IDE** | VS Code / IntelliJ IDEA |
 
 ## 🚀 Installation & Démarrage
