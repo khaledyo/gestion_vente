@@ -1,90 +1,97 @@
-🛍️ Gigashop – Application de Gestion de Vente (JavaFX)
-🧾 Description du projet
+# 🛍️ Gigashop – Application de Gestion de Vente (JavaFX)
 
-Gigashop est une application de gestion de vente et de stock développée en JavaFX.
-Elle permet à un administrateur de gérer efficacement les clients, produits, commandes et livraisons à travers une interface moderne, intuitive et responsive.
+<div align="center">
 
-L’objectif de ce projet est de proposer une solution complète pour la gestion d’un petit magasin, avec une interface fluide et une expérience utilisateur professionnelle.
+![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
+![JavaFX](https://img.shields.io/badge/JavaFX-ED8B00?style=for-the-badge&logo=javafx&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
 
-🔐 Authentification
+**Une application moderne de gestion de vente et de stock développée avec JavaFX**
 
-Écran de connexion sécurisé avec nom d’utilisateur et mot de passe.
+[Fonctionnalités](#-fonctionnalités) • [Captures d'écran](#-captures-décran) • [Installation](#-installation) • [Technologies](#-technologies-utilisées)
 
-Accès restreint à l’interface principale pour les utilisateurs autorisés.
+</div>
 
-🏠 Tableau de bord
+## 🧾 Description du projet
 
-Vue d’ensemble des statistiques :
+Gigashop est une application complète de gestion commerciale développée en **JavaFX** qui permet aux administrateurs de gérer efficacement l'ensemble du cycle de vente : des clients aux livraisons, en passant par les produits et les commandes.
 
-Nombre de commandes, clients, livraisons et produits.
+L'application offre une **interface moderne et intuitive** avec une expérience utilisateur fluide, spécialement conçue pour les petits et moyens commerces.
 
-Suivi des livraisons effectuées et non effectuées.
+## ✨ Fonctionnalités
 
-Indication des produits proches de l’épuisement pour faciliter la gestion du stock.
+### 🔐 Authentification Sécurisée
+- Écran de connexion sécurisé avec validation des identifiants
+- Accès restreint à l'interface principale
+- Gestion des sessions utilisateur
 
-👥 Gestion des clients
+### 📊 Tableau de Bord Intelligent
+- **Vue d'ensemble en temps réel** des indicateurs clés
+- Statistiques des commandes, clients, livraisons et produits
+- Alertes automatiques pour les **stocks critiques**
+- Suivi visuel des livraisons (effectuées/en attente)
 
-Recherche de clients par nom, prénom, adresse ou téléphone.
+### 👥 Gestion des Clients
+- ✅ **Recherche avancée** par nom, prénom, adresse ou téléphone
+- ✅ Ajout, modification et suppression de clients
+- ✅ Interface tableau dynamique avec tri et filtrage
+- ✅ Gestion complète des informations client
 
-Possibilité d’ajouter, modifier ou supprimer un client.
+### 📦 Gestion des Produits & Stock
+- ✅ Catalogue produits avec images et descriptions
+- ✅ Gestion des niveaux de stock en temps réel
+- ✅ Alertes automatiques pour les produits en rupture
+- ✅ Prix, catégories et informations détaillées
 
-Interface conviviale avec un tableau dynamique (TableView) pour afficher la liste des clients.
+### 🧾 Gestion des Commandes
+- ✅ Création et suivi des commandes clients
+- ✅ Association commandes ↔ clients ↔ produits
+- ✅ Historique complet des transactions
+- ✅ Statuts de commande (En attente, Validée, Livrée)
 
-📦 Gestion des produits
+### 🚚 Suivi des Livraisons
+- ✅ Gestion du cycle complet de livraison
+- ✅ Mise à jour automatique des statuts
+- ✅ Suivi des livraisons en temps réel
 
-Ajout, modification et suppression de produits.
+## 🖼️ Captures d'écran
 
-Suivi du stock et alerte des produits en faible quantité.
+<div align="center">
 
-🧾 Gestion des commandes
+### 🔑 Page de Connexion
+<img width="400" alt="Page de connexion sécurisée" src="https://github.com/user-attachments/assets/ac638adb-2c38-4391-9498-45d70d33f804" />
 
-Création et suivi des commandes clients.
+### 📊 Tableau de Bord Principal  
+<img width="400" alt="Tableau de bord avec statistiques" src="https://github.com/user-attachments/assets/03a5a995-2d39-45ed-8335-73473956decd" />
 
-Association des commandes avec les clients et les produits correspondants.
+### 👤 Gestion des Clients
+<img width="400" alt="Interface de gestion clients" src="https://github.com/user-attachments/assets/11cb8af5-e074-4c0d-a137-9f624fd208d9" />
 
-🚚 Gestion des livraisons
+</div>
 
-Gestion des livraisons effectuées et en attente.
+## 🛠️ Technologies Utilisées
 
-Mise à jour automatique de l’état de la livraison.
+| Composant | Technologie |
+|-----------|-------------|
+| **🖥️ Interface** | JavaFX, Scene Builder |
+| **🎨 Design** | CSS3, Material Design |
+| **💾 Base de données** | MySQL, JDBC |
+| **🏗️ Architecture** | Pattern MVC (Modèle-Vue-Contrôleur) |
+| **📦 Gestion de build** | Maven |
+| **🔧 IDE** | VS Code / IntelliJ IDEA |
 
-🖼️ Aperçu de l’application
-🔑 Page de connexion
-<img width="400"  alt="Screenshot 2025-11-12 223013" src="https://github.com/user-attachments/assets/ac638adb-2c38-4391-9498-45d70d33f804" />
+## 🚀 Installation & Démarrage
 
-🏠 Tableau de bord principal
-<img width="400" alt="Screenshot 2025-11-12 223051" src="https://github.com/user-attachments/assets/03a5a995-2d39-45ed-8335-73473956decd" />
+### Prérequis
+- **Java 17** ou supérieur
+- **JavaFX 17** ou supérieur
+- **MySQL 8.0** ou supérieur
+- **Scene Builder** (recommandé)
 
-👤 Gestion des clients
-<img width="400" alt="Screenshot 2025-11-12 223140" src="https://github.com/user-attachments/assets/11cb8af5-e074-4c0d-a137-9f624fd208d9" />
+### 📥 Installation
 
-🧰 Technologies utilisées
-
-JavaFX – Interface graphique
-
-JDBC / MySQL – Gestion de la base de données
-
-Scene Builder – Conception des interfaces
-
-CSS – Personnalisation du design
-
-MVC Pattern – Architecture modulaire et maintenable
-
-🚀 Exécution du projet
-
-Importer le projet dans IntelliJ IDEA ou Eclipse.
-
-Configurer la connexion à la base de données MySQL.
-
-Lancer la classe principale Main.java.
-
-Se connecter avec les identifiants par défaut :
-
-Username : admin
-
-Password : admin
-
-👨‍💻 Auteur
-
-Khaled Younes
-📧 khaledyounes145@gmail.com
+1. **Cloner le repository**
+```bash
+git clone https://github.com/votre-username/gigashop.git
+cd gigashop
